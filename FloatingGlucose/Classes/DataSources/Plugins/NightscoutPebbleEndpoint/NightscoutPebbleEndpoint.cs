@@ -1,4 +1,4 @@
-using FloatingGlucose.Classes.Extensions;
+﻿using FloatingGlucose.Classes.Extensions;
 using FloatingGlucose.Classes.Utils;
 using Newtonsoft.Json;
 using System;
@@ -181,7 +181,7 @@ namespace FloatingGlucose.Classes.DataSources.Plugins
                 this.Date = DateTimeOffset.FromUnixTimeMilliseconds(bgs.datetime).DateTime;
                 this.Delta = Double.Parse(bgs.bgdelta, NumberStyles.Any, CultureInfo.InvariantCulture);
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException)
             {
                 //this exception might be hit when the Nightscout installation is brand new or contains no recent data;
                 throw new MissingDataException("No data");

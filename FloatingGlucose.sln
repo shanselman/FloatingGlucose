@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31221.73
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingGlucose", "FloatingGlucose\FloatingGlucose.csproj", "{8D044F87-547D-4E76-8A67-3225DB984C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatingGlucose", "FloatingGlucose\FloatingGlucose.csproj", "{8D044F87-547D-4E76-8A67-3225DB984C63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareClientDotNet", "ShareClientDotNet\ShareClientDotNet.csproj", "{2AD02968-E7EA-4989-8BD8-FAD6A31C0072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareClientDotNet", "ShareClientDotNet\ShareClientDotNet.csproj", "{2AD02968-E7EA-4989-8BD8-FAD6A31C0072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartWin", "winforms-datavisualization-net5\src\System.Windows.Forms.DataVisualization\ChartWin.csproj", "{CD571259-3FDE-4B5E-B0A7-F87388583326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +33,19 @@ Global
 		{2AD02968-E7EA-4989-8BD8-FAD6A31C0072}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2AD02968-E7EA-4989-8BD8-FAD6A31C0072}.Release+nosign|Any CPU.ActiveCfg = Release|Any CPU
 		{2AD02968-E7EA-4989-8BD8-FAD6A31C0072}.Release+nosign|Any CPU.Build.0 = Release|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Debug+nosign|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Debug+nosign|Any CPU.Build.0 = Debug|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Release+nosign|Any CPU.ActiveCfg = Release|Any CPU
+		{CD571259-3FDE-4B5E-B0A7-F87388583326}.Release+nosign|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {343C9185-4732-4FB7-B2B6-DA4C0640083F}
 	EndGlobalSection
 EndGlobal

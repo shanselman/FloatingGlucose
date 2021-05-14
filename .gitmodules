@@ -1,3 +1,6 @@
 [submodule "ShareClientDotNet"]
 	path = ShareClientDotNet
-	url = https://github.com/dabear/ShareClientDotNet
+	url = https://github.com/shanselman/ShareClientDotNet.git
+[submodule "winforms-datavisualization-net5"]
+	path = winforms-datavisualization-net5
+	url = https://github.com/AngeloCresta/winforms-datavisualization-net5.git

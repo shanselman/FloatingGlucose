@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace FloatingGlucose
 {
-    [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+    // [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FormWebbrowser : Form
     {

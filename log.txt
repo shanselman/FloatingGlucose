@@ -1,0 +1,127 @@
+2021-05-13 22:25:04.180 -07:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.202\
+2021-05-13 22:25:04.227 -07:00 [INF] Registered 1 extensions:
+	Default extension
+2021-05-13 22:25:07.033 -07:00 [INF] Initializing upgrade step Select an entrypoint
+2021-05-13 22:25:07.037 -07:00 [INF] Setting entrypoint to only project in solution: C:\github\FloatingGlucose\FloatingGlucose\FloatingGlucose.csproj
+2021-05-13 22:25:07.047 -07:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-13 22:25:07.147 -07:00 [INF] Initializing upgrade step Back up project
+2021-05-13 22:25:42.577 -07:00 [INF] Skipping upgrade step Back up project
+2021-05-13 22:25:42.579 -07:00 [INF] Upgrade step Back up project skipped
+2021-05-13 22:25:44.456 -07:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-13 22:25:49.529 -07:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-13 22:25:49.531 -07:00 [INF] Converting project file format with try-convert, version 0.7.222801
+2021-05-13 22:25:52.172 -07:00 [INF] [try-convert] Conversion complete!
+2021-05-13 22:25:52.933 -07:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-13 22:25:55.217 -07:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-13 22:27:14.516 -07:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-13 22:27:16.033 -07:00 [INF] Marking assembly reference System.Configuration for removal based on package mapping configuration System.Configuration
+2021-05-13 22:27:16.037 -07:00 [INF] Adding package System.Configuration.ConfigurationManager based on package mapping configuration System.Configuration
+2021-05-13 22:27:16.802 -07:00 [WRN] No version of System.Configuration.ConfigurationManager found that supports ["net46"]; leaving unchanged
+2021-05-13 22:27:17.037 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:27:17.042 -07:00 [INF] References to be removed: System.Configuration
+2021-05-13 22:27:17.043 -07:00 [INF] Packages to be added: System.Configuration.ConfigurationManager, Version=5.0.0
+2021-05-13 22:27:22.530 -07:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-13 22:27:22.533 -07:00 [INF] Removing outdated assembly reference: System.Configuration
+2021-05-13 22:27:22.536 -07:00 [INF] Adding package reference: System.Configuration.ConfigurationManager, Version=5.0.0
+2021-05-13 22:27:24.625 -07:00 [WRN] No version of System.Configuration.ConfigurationManager found that supports ["net46"]; leaving unchanged
+2021-05-13 22:27:24.628 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:27:24.630 -07:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-13 22:27:25.667 -07:00 [INF] Initializing upgrade step Update TFM
+2021-05-13 22:27:25.674 -07:00 [INF] TFM needs updated to net5.0-windows
+2021-05-13 22:27:27.728 -07:00 [INF] Applying upgrade step Update TFM
+2021-05-13 22:27:30.864 -07:00 [INF] Updated TFM to net5.0-windows
+2021-05-13 22:27:30.865 -07:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-13 22:27:32.545 -07:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-13 22:27:34.039 -07:00 [INF] Marking assembly reference System.Web.Extensions for removal based on package mapping configuration ASP.NET
+2021-05-13 22:27:34.040 -07:00 [INF] Adding framework reference Microsoft.AspNetCore.App based on package mapping configuration ASP.NET
+2021-05-13 22:27:34.274 -07:00 [INF] Marking package NAudio, Version=1.8.0 for removal because it doesn't support the target framework but a newer version (1.10.0) does
+2021-05-13 22:27:34.294 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:27:34.757 -07:00 [INF] Adding Microsoft.Windows.Compatibility 5.0.2
+2021-05-13 22:27:34.760 -07:00 [INF] References to be removed: System.Web.Extensions
+2021-05-13 22:27:34.761 -07:00 [INF] Packages to be removed: NAudio, Version=1.8.0
+2021-05-13 22:27:34.762 -07:00 [INF] Packages to be added: NAudio, Version=1.10.0
+Microsoft.Windows.Compatibility, Version=5.0.2
+2021-05-13 22:27:34.763 -07:00 [INF] Framework references to be added: Microsoft.AspNetCore.App
+2021-05-13 22:27:40.520 -07:00 [INF] Applying upgrade step Update NuGet Packages
+2021-05-13 22:27:40.521 -07:00 [INF] Removing outdated assembly reference: System.Web.Extensions
+2021-05-13 22:27:40.522 -07:00 [INF] Removing outdated package reference: NAudio, Version=1.8.0
+2021-05-13 22:27:40.523 -07:00 [INF] Adding package reference: NAudio, Version=1.10.0
+2021-05-13 22:27:40.524 -07:00 [INF] Adding package reference: Microsoft.Windows.Compatibility, Version=5.0.2
+2021-05-13 22:27:40.526 -07:00 [INF] Adding framework reference: Microsoft.AspNetCore.App
+2021-05-13 22:27:43.798 -07:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-05-13 22:27:43.802 -07:00 [INF] Marking package System.Configuration.ConfigurationManager for removal because it appears to be a transitive dependency
+2021-05-13 22:27:43.835 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:27:43.886 -07:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-05-13 22:27:43.887 -07:00 [INF] Removing outdated package reference: System.Configuration.ConfigurationManager, Version=5.0.0
+2021-05-13 22:27:46.488 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:27:46.586 -07:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-05-13 22:27:47.408 -07:00 [INF] Initializing upgrade step Add template files
+2021-05-13 22:27:47.449 -07:00 [INF] 0 expected template items needed
+2021-05-13 22:27:47.450 -07:00 [INF] Initializing upgrade step Upgrade app config files
+2021-05-13 22:27:47.485 -07:00 [INF] Found 0 app settings for upgrade: 
+2021-05-13 22:27:47.489 -07:00 [INF] 0 web page namespace imports need upgraded: 
+2021-05-13 22:27:47.501 -07:00 [INF] Initializing upgrade step Update source code
+2021-05-13 22:27:49.480 -07:00 [INF] Initializing upgrade step Move to next project
+2021-05-13 22:28:01.231 -07:00 [INF] Applying upgrade step Move to next project
+2021-05-13 22:28:01.232 -07:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-13 22:28:02.106 -07:00 [INF] Initializing upgrade step Finalize upgrade
+2021-05-13 22:28:03.791 -07:00 [INF] Applying upgrade step Finalize upgrade
+2021-05-13 22:28:03.792 -07:00 [INF] Upgrade step Finalize upgrade applied successfully
+2021-05-13 22:28:04.808 -07:00 [INF] Upgrade has completed. Please review any changes.
+2021-05-13 22:28:04.810 -07:00 [INF] Saving upgrade progress file at C:\github\FloatingGlucose\.upgrade-assistant
+2021-05-13 22:34:10.907 -07:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.202\
+2021-05-13 22:34:10.988 -07:00 [INF] Registered 1 extensions:
+	Default extension
+2021-05-13 22:34:14.871 -07:00 [INF] Loading upgrade progress file at C:\github\FloatingGlucose\.upgrade-assistant
+2021-05-13 22:34:14.958 -07:00 [INF] Initializing upgrade step Select an entrypoint
+2021-05-13 22:34:16.507 -07:00 [INF] Applying upgrade step Select an entrypoint
+2021-05-13 22:34:20.638 -07:00 [INF] Upgrade step Select an entrypoint applied successfully
+2021-05-13 22:34:21.890 -07:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-13 22:34:21.906 -07:00 [INF] No projects need upgraded for selected entrypoint
+2021-05-13 22:34:21.907 -07:00 [INF] Initializing upgrade step Finalize upgrade
+2021-05-13 22:34:23.300 -07:00 [INF] Applying upgrade step Finalize upgrade
+2021-05-13 22:34:23.301 -07:00 [INF] Upgrade step Finalize upgrade applied successfully
+2021-05-13 22:34:26.418 -07:00 [INF] Upgrade has completed. Please review any changes.
+2021-05-13 22:34:26.420 -07:00 [INF] Saving upgrade progress file at C:\github\FloatingGlucose\.upgrade-assistant
+2021-05-13 22:34:28.783 -07:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.202\
+2021-05-13 22:34:28.824 -07:00 [INF] Registered 1 extensions:
+	Default extension
+2021-05-13 22:34:30.675 -07:00 [INF] Loading upgrade progress file at C:\github\FloatingGlucose\.upgrade-assistant
+2021-05-13 22:34:30.711 -07:00 [INF] Initializing upgrade step Select an entrypoint
+2021-05-13 22:34:35.291 -07:00 [INF] Applying upgrade step Select an entrypoint
+2021-05-13 22:34:37.673 -07:00 [INF] Upgrade step Select an entrypoint applied successfully
+2021-05-13 22:34:38.777 -07:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-13 22:34:38.803 -07:00 [INF] Initializing upgrade step Back up project
+2021-05-13 22:34:42.690 -07:00 [INF] Skipping upgrade step Back up project
+2021-05-13 22:34:42.691 -07:00 [INF] Upgrade step Back up project skipped
+2021-05-13 22:34:43.907 -07:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-13 22:34:45.097 -07:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-13 22:34:45.100 -07:00 [INF] Converting project file format with try-convert, version 0.7.222801
+2021-05-13 22:34:45.711 -07:00 [INF] [try-convert] C:\github\FloatingGlucose\ShareClientDotNet\ShareClientDotNet.csproj contains an App.config file. App.config is replaced by appsettings.json in .NET Core. You will need to delete App.config and migrate to appsettings.json if it's applicable to your project.
+2021-05-13 22:34:46.931 -07:00 [INF] [try-convert] Conversion complete!
+2021-05-13 22:34:47.448 -07:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-13 22:34:49.077 -07:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-13 22:34:52.489 -07:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-13 22:34:54.278 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:34:54.282 -07:00 [INF] No package updates needed
+2021-05-13 22:34:54.283 -07:00 [INF] Initializing upgrade step Update TFM
+2021-05-13 22:34:54.286 -07:00 [INF] TFM needs updated to net5.0
+2021-05-13 22:34:55.776 -07:00 [INF] Applying upgrade step Update TFM
+2021-05-13 22:34:58.305 -07:00 [INF] Updated TFM to net5.0
+2021-05-13 22:34:58.306 -07:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-13 22:34:59.096 -07:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-13 22:35:00.637 -07:00 [WRN] .NET Upgrade Assistant analyzer NuGet package reference cannot be added because the package cannot be found
+2021-05-13 22:35:00.660 -07:00 [INF] No package updates needed
+2021-05-13 22:35:00.661 -07:00 [INF] Initializing upgrade step Add template files
+2021-05-13 22:35:00.704 -07:00 [INF] 0 expected template items needed
+2021-05-13 22:35:00.705 -07:00 [INF] Initializing upgrade step Upgrade app config files
+2021-05-13 22:35:00.716 -07:00 [INF] Found 0 app settings for upgrade: 
+2021-05-13 22:35:00.739 -07:00 [INF] Initializing upgrade step Update source code
+2021-05-13 22:35:02.071 -07:00 [INF] Initializing upgrade step Move to next project
+2021-05-13 22:35:03.640 -07:00 [INF] Applying upgrade step Move to next project
+2021-05-13 22:35:03.641 -07:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-13 22:35:04.381 -07:00 [INF] Initializing upgrade step Finalize upgrade
+2021-05-13 22:35:06.138 -07:00 [INF] Applying upgrade step Finalize upgrade
+2021-05-13 22:35:06.139 -07:00 [INF] Upgrade step Finalize upgrade applied successfully
+2021-05-13 22:35:06.744 -07:00 [INF] Upgrade has completed. Please review any changes.
+2021-05-13 22:35:06.746 -07:00 [INF] Saving upgrade progress file at C:\github\FloatingGlucose\.upgrade-assistant

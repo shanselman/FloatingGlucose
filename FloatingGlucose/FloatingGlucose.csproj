@@ -1,17 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D044F87-547D-4E76-8A67-3225DB984C63}</ProjectGuid>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FloatingGlucose</RootNamespace>
-    <AssemblyName>FloatingGlucose</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -28,31 +18,12 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>noun_335372_cc_v2.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
@@ -67,23 +38,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug+nosign|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug+nosign\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
     <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release+nosign|AnyCPU'">
     <OutputPath>bin\Release+nosign\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>FloatingGlucose.Program</StartupObject>
@@ -92,214 +53,30 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NAudio, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NAudio.1.8.0\lib\net35\NAudio.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="..\ShareClientDotNet\*.cs">
       <Link>_Inlined\ShareClientDotNet\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
-    <Compile Include="Classes\DataSources\DataSourceInfo.cs" />
-    <Compile Include="Classes\DataSources\IDataSourcePlugin.cs" />
-    <Compile Include="Classes\DataSources\Exceptions\NoPluginChosenException.cs" />
-    <Compile Include="Classes\DataSources\Exceptions\NoSuchPluginException.cs" />
-    <Compile Include="Classes\DataSources\Exceptions\ConfigValidationException.cs" />
-    <Compile Include="Classes\DataSources\Plugins\DexcomShare\DexcomShareNonUS.cs" />
-    <Compile Include="Classes\DataSources\Plugins\DexcomShare\DexcomShareUS.cs" />
-    <Compile Include="Classes\DataSources\Plugins\GlimpFileEndpoint.cs" />
-    <Compile Include="Classes\DataSources\Plugins\NightscoutPebbleFileEndpoint.cs" />
-    <Compile Include="Classes\DataSources\PluginLoader.cs" />
-    <Compile Include="Classes\DataSources\Plugins\YrWeatherService\YrHourByHour.cs" />
-    <Compile Include="Classes\DataSources\Plugins\YrWeatherService\YrWeatherServiceEndpoint.cs" />
-    <Compile Include="Classes\Extensions\ColorExtensions.cs" />
-    <Compile Include="Classes\Extensions\IDataSourcePluginExtensions.cs" />
-    <Compile Include="Classes\Extensions\FormExtensions.cs" />
-    <Compile Include="Classes\Extensions\DatetimeExtensions.cs" />
-    <Compile Include="Classes\AppShared.cs" />
-    <Compile Include="Classes\DataSources\Plugins\NightscoutPebbleEndpoint\GeneratedNsData.cs" />
-    <Compile Include="Classes\Utils\BGReading.cs" />
-    <Compile Include="Classes\Utils\DataProtector.cs" />
-    <Compile Include="Classes\Utils\DataProtectorConverter.cs" />
-    <Compile Include="Classes\Utils\GlucoseMath.cs" />
-    <Compile Include="Classes\Audio\LoopStream.cs" />
-    <Compile Include="Classes\DataSources\Exceptions\InvalidJsonDataException.cs" />
-    <Compile Include="Classes\DataSources\Exceptions\MissingDataException.cs" />
-    <Compile Include="Classes\DataSources\Plugins\NightscoutPebbleEndpoint\NightscoutPebbleEndpoint.cs" />
-    <Compile Include="Classes\Audio\SoundAlarm.cs" />
-    <Compile Include="Classes\Utils\GlucoseAlarmStatusEnum.cs" />
-    <Compile Include="Classes\Utils\Validators.cs" />
-    <Compile Include="FloatingGlucose.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FloatingGlucose.Designer.cs">
-      <DependentUpon>FloatingGlucose.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormGlucoseSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormGlucoseSettings.Designer.cs">
-      <DependentUpon>FormGlucoseSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="Properties\FormSettings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>FormSettings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="FormWebbrowser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormWebbrowser.Designer.cs">
-      <DependentUpon>FormWebbrowser.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FloatingGlucose.resx">
-      <DependentUpon>FloatingGlucose.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormGlucoseSettings.resx">
-      <DependentUpon>FormGlucoseSettings.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="FormWebbrowser.resx">
-      <DependentUpon>FormWebbrowser.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>PublicSettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <None Include="Properties\FormSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>FormSettings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+  
   <ItemGroup>
     <Content Include="noun_335372_cc_v2.ico" />
     <Content Include="README_attributions.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\noun_335372_cc_v2.ico" />
-    <None Include="Resources\browse-file.ico" />
-    <None Include="Resources\alarm.mp3" />
-    <None Include="Resources\alarm2.mp3" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>cd $(TargetDir)
-
-
-set "projectname=$(ProjectName)"
-set "buildconfigname=$(ConfigurationName)"
-set "signtool="C:\Program Files (x86)\Windows Kits\8.1\bin\x64\signtool.exe" sign /fd sha256 /tr http://time.certum.pl/ /sha1 0B360481F3F59C7F398FB0417AA4B341EB018906 "
-set "innosetupiscc="%25programfiles(x86)%25/Inno Setup 5/ISCC.exe" /Qp"
-set PWS=powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile
-
-echo Deleting files in build directory
-%25PWS%25 -Command "ls | where { ($_.Name.contains(\"Setup\") -or $_.Name.EndsWith(\".zip\")) } | rm"
-
-REM install(import) pfx to windows certificate store, then select it based on its sha1 #hash and sign the application
-REM the visual studio code signing doesn't seem to handle the pfx file I have correctly, so I rather invoke signing manually here with signtool (part of visual studio):
-
-ECHO.$(ConfigurationName)| FIND /I "nosign"&gt;Nul &amp;&amp; ( 
-
-  Echo Did not sign executables
-) || (
-  echo Signing application executables
-  %25signtool%25 $(TargetPath)
-  %25signtool%25 $(TargetDir)\*.dll
-)
-
-
-REM Creates version numbered zip file
-
-echo Creating version.txt file and zipping release
-%25PWS%25 -Command ". ..\..\buildscripts\create-zip-file.ps1; writeVersionFile;  createReleaseZipFile; "
-set /p BUILDVER=&lt;version.txt
-REM creates setupRelease.exe|setupDebug.exe installer
-
-echo Creating Signed installer file
-
-ECHO.$(ConfigurationName)| FIND /I "nosign"&gt;Nul &amp;&amp; ( 
-  
-  cd $(ProjectDir)\installer
-  %25innosetupiscc%25 /DReleaseType=$(ConfigurationName)  /DMyAppVersion=%25BUILDVER%25 /O$(TargetDir)  floatingglucosenosign.iss
-) || (
-  cd $(ProjectDir)\installer
-  %25innosetupiscc%25 /DReleaseType=$(ConfigurationName)  /DMyAppVersion=%25BUILDVER%25 /O$(TargetDir)  floatingglucose.iss
-)
-
-</PostBuildEvent>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PreBuildEvent>
-set PWS=powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile
-cd $(TargetDir)
-</PreBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NAudio" Version="1.10.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\winforms-datavisualization-net5\src\System.Windows.Forms.DataVisualization\ChartWin.csproj" />
+  </ItemGroup>
 </Project>
