@@ -10,7 +10,7 @@ on:
       - '**/*.gitattributes'
   workflow_dispatch:
     branches:
-      - mastare
+      - master
     paths-ignore:
       - '**/*.md'
       - '**/*.gitignore'
@@ -55,4 +55,3 @@ jobs:
       with:
         name: self-contained-build
         path: ./publish
-
