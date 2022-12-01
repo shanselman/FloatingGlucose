@@ -761,7 +761,8 @@ namespace FloatingGlucose
             {
                 try
                 {
-                    Process.Start(url);
+                    var processStartInfo = new ProcessStartInfo(url) {UseShellExecute = true};
+                    Process.Start(processStartInfo);
                 }
                 catch (Win32Exception ex)
                 {
